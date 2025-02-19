@@ -9,7 +9,7 @@ build:
 
 python:
   install:
-    - requirements: docs/requirements.txt
+    - requirements: requirements.txt
 
 sphinx:
-  configuration: docs/zh_cn/conf.py
+  configuration: zh_cn/conf.py
