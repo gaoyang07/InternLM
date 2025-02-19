@@ -6,12 +6,16 @@ English | [简体中文](openaoe_zh_cn.md)
 
 [OpenAOE](https://github.com/InternLM/OpenAOE) is a LLM-Group-Chat Framework, which can chat with multiple LLMs (commercial/open source LLMs) at the same time. OpenAOE provides both backend API and WEB-UI to meet different usage needs.
 
-Currently already supported LLMs: [internlm2_5-7b-chat](https://huggingface.co/internlm/internlm2_5-7b-chat), [IntenLM-Chat-7B](https://huggingface.co/internlm/internlm-chat-7b), GPT-3.5, GPT-4, Google PaLM, MiniMax, Claude, Spark, etc.
+Currently already supported LLMs: [internlm2_5-7b-chat](https://huggingface.co/internlm/internlm2_5-7b-chat), [InternLM-Chat-7B](https://huggingface.co/internlm/internlm-chat-7b), GPT-3.5, GPT-4, Google PaLM, MiniMax, Claude, Spark, etc.
 
 ## Quick Run
 
-> \[!TIP\]
-> Require python >= 3.9
+<!-- > [!TIP]
+> Require python >= 3.9 -->
+
+```{tip}
+ Require python >= 3.9
+```
 
 We provide three different ways to run OpenAOE: `run by pip`， `run by docker` and `run by source code` as well.
 
@@ -81,8 +85,15 @@ pip install -r openaoe/backend/requirements.txt
 python -m openaoe.main -f /path/to/your/config-template.yaml
 ```
 
-> \[!TIP\]
-> `/path/to/your/config-tempalte.yaml` is the configuration file loaded by OpenAOE at startup,
+<!-- > [!TIP]
+> `/path/to/your/config-template.yaml` is the configuration file loaded by OpenAOE at startup,
 > which contains the relevant configuration information for the LLMs,
 > including: API URLs, AKSKs, Tokens, etc.
-> A template configuration yaml file can be found in `openaoe/backend/config/config-template.yaml`.
+> A template configuration yaml file can be found in `openaoe/backend/config/config-template.yaml`. -->
+
+```{tip}
+ `/path/to/your/config-template.yaml` is the configuration file loaded by OpenAOE at startup,
+ which contains the relevant configuration information for the LLMs,
+ including: API URLs, AKSKs, Tokens, etc.
+ A template configuration yaml file can be found in `openaoe/backend/config/config-template.yaml`.
+```

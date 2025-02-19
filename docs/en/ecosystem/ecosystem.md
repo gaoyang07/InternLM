@@ -2,7 +2,7 @@
 
 With the innovation waves driven by large language models (LLMs),  InternLM has been continuously building more comprehensive and powerful foundational models. It adheres to open-source and free commercial use, fully empowering the prosperity and development of the AI community ecosystem. It helps businesses and research institutions to lower the barriers to developing and applying LLMs, allowing the value of LLMs to shine in various industries.
 
-The released InternLM supports a variety of well-known upstream and downstream projects, including LLaMA-Factory, vLLM, Langchain, and others, enabling a wide range of users to utilize the InternLM series models and open-source toolchains more efficiently and conveniently.
+The released InternLM supports a variety of well-known upstream and downstream projects, including LLaMA-Factory, vLLM, LangChain, and others, enabling a wide range of users to utilize the InternLM series models and open-source toolchains more efficiently and conveniently.
 
 We categorize ecosystem projects into three main areas: Training, Inference, and Application. Each area features a selection of renowned open-source projects compatible with InternLM models. The list is continually expanding, and we warmly invite contributions from the community to include additional worthy projects.
 
@@ -34,7 +34,7 @@ llamafactory-cli train \
 
 ### [swift](https://github.com/modelscope/swift)
 
-SWIFT supports training, inference, evaluation and deployment of LLMs and MLLMs (multimodal large models).
+SWIFT supports training, inference, evaluation and deployment of LLMs and MLLMs (multi-modal large models).
 
 ```bash
 swift sft --model_type internlm2-1_8b-chat \
@@ -147,7 +147,7 @@ curl 127.0.0.1:8080/generate_stream \
 
 Ollama bundles model weights, configuration, and data into a single package, defined by a Modelfile. It optimizes setup and configuration details, enabling users to easily set up and execute LLMs locally (in CPU and GPU modes).
 
-The following snippet presents the Modefile of InternLM2.5 with `internlm3-8b-instruct` as an example. Note that the model has to be converted to GGUF model at first.
+The following snippet presents the Modelfile of InternLM2.5 with `internlm3-8b-instruct` as an example. Note that the model has to be converted to GGUF model at first.
 
 ```shell
 echo 'FROM ./internlm3-8b-instruct.gguf
@@ -238,7 +238,7 @@ response = generate(model, tokenizer, prompt="write a story", verbose=True)
 
 ## Application
 
-### [Langchain](https://github.com/langchain-ai/langchain)
+### [LangChain](https://github.com/langchain-ai/langchain)
 
 LangChain is a framework for developing applications powered by large language models (LLMs).
 
@@ -279,7 +279,7 @@ Therefore, you can integrate InternLM2 or InternLM2.5 models to LlamaIndex smoot
 Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform designed to run completely offline. It supports Ollama services and other compatible OpenAI API services, and comes with a built-in RAG reasoning engine, making it a powerful AI deployment solution.
 
 1. You can start an API service with LMDeploy, or launch the service with ollama.
-2. Follow the [guidance](https://github.com/open-webui/open-webui?tab=readme-ov-file#installation-via-python-pip-)to install Open WebUI, and start the webui service with open-webui serve. Open the webui in your browser.
+2. Follow the [guidance](https://github.com/open-webui/open-webui?tab=readme-ov-file#installation-via-python-pip-) to install Open WebUI, and start the webui service with open-webui serve. Open the webui in your browser.
 3. Refer to the [documentation](https://docs.openwebui.com/getting-started/quick-start/starting-with-ollama#step-2-managing-your-ollama-instance). Inside the opened page, find the settings, configure the OpenAI-like services or ollama services. Once configured, you can choose a model to engage in conversation.
 
 ### [LazyLLM](https://github.com/LazyAGI/LazyLLM)
@@ -297,11 +297,11 @@ WebModule(m).start().wait()
 ```
 
 You can use the following code to finetune your model if needed. When the trainset (The dataset needs to be downloaded to the local machine, for example:[
-alpaca_gpt4_zh](https://huggingface.co/datasets/llamafactory/alpaca_gpt4_zh)) of the TrainableModule is set, during the calling of the WebModule's update function, the TrainableModule will be automatically fine-tuned, and then both the TrainableModule and the WebModule will be deployed separately.
+alpaca_gpt4_zh](https://huggingface.co/datasets/llamafactory/alpaca_gpt4_zh) of the TrainableModule is set, during the calling of the WebModule's update function, the TrainableModule will be automatically fine-tuned, and then both the TrainableModule and the WebModule will be deployed separately.
 
 ```python
 from lazyllm import TrainableModule, WebModule
-m = TrainableModule('internlm2-chat-7b').trainset('/patt/to/your_data.json').mode('finetune')
+m = TrainableModule('internlm2-chat-7b').trainset('/path/to/your_data.json').mode('finetune')
 WebModule(m).update().wait()
 ```
 

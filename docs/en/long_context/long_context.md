@@ -74,7 +74,8 @@ Of course, you can tweak these settings for optimal performance yourself in the 
 
 The effect is demonstrated in the video below.
 
-https://github.com/libowen2121/InternLM/assets/19970308/1d7f9b87-d458-4f24-9f7a-437a4da3fa6e
+<video src="https://github.com/libowen2121/InternLM/assets/19970308/1d7f9b87-d458-4f24-9f7a-437a4da3fa6e" controls width="100%">
+</video>
 
 ## 🔜 Stay Tuned for More
 

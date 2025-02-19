@@ -13,7 +13,7 @@ We recommend two projects to fine-tune InternLM.
 ### Highlights
 
 1. Support LLM, VLM pre-training / fine-tuning on almost all GPUs. XTuner is capable of fine-tuning InternLM2-7B on a single 8GB GPU, as well as multi-node fine-tuning of models exceeding 70B.
-2. Support various training algorithms ([QLoRA](http://arxiv.org/abs/2305.14314), [LoRA](http://arxiv.org/abs/2106.09685), full-parameter fune-tune), allowing users to choose the most suitable solution for their requirements.
+2. Support various training algorithms ([QLoRA](http://arxiv.org/abs/2305.14314), [LoRA](http://arxiv.org/abs/2106.09685), full-parameter fine-tune), allowing users to choose the most suitable solution for their requirements.
 3. Compatible with [DeepSpeed](https://github.com/microsoft/DeepSpeed) 🚀, easily utilizing a variety of ZeRO optimization techniques.
 4. The output models can seamlessly integrate with deployment and server toolkit ([LMDeploy](https://github.com/InternLM/lmdeploy)), and large-scale evaluation toolkit ([OpenCompass](https://github.com/open-compass/opencompass), [VLMEvalKit](https://github.com/open-compass/VLMEvalKit)).
 

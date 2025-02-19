@@ -11,6 +11,14 @@ We released InternLM3, which has open-sourced an 8-billion parameter instruction
 - **Deep thinking capability**:
   InternLM3 supports both the deep thinking mode for solving complicated reasoning tasks via the long chain-of-thought and the normal response mode for fluent user interactions.
 
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: ecosystem
+
+   ecosystem/*
+
 .. toctree::
    :glob:
    :maxdepth: 1
@@ -21,16 +29,9 @@ We released InternLM3, which has open-sourced an 8-billion parameter instruction
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: ecosystem
-
-   ecosystem/ecosystem.md
-
-.. toctree::
-   :glob:
-   :maxdepth: 1
    :caption: finetune
 
-   finetune/finetune.md
+   finetune/*
 
 .. toctree::
    :glob:
@@ -51,7 +52,7 @@ We released InternLM3, which has open-sourced an 8-billion parameter instruction
    :maxdepth: 1
    :caption: long_context
 
-   long_context/long_context.md
+   long_context/*
 
 .. toctree::
    :caption: Switch Language
