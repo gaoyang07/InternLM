@@ -1,4 +1,4 @@
-# Lagnet
+# Lagent
 
 [English](lagent.md) | 简体中文
 

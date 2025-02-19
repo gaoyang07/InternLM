@@ -36,9 +36,9 @@ We released InternLM3, which has open-sourced an 8-billion parameter instruction
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: chat
+   :caption: dialogue interface
 
-   chat/*
+   dialogue_interface/*
 
 .. toctree::
    :glob:
@@ -58,10 +58,3 @@ We released InternLM3, which has open-sourced an 8-billion parameter instruction
    :caption: Switch Language
 
    switch_language.md
-
-Indices and tables
-====================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

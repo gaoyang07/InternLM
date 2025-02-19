@@ -17,9 +17,9 @@ sys.path.insert(0, os.path.abspath('../..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'internlm'
-copyright = '2025, internlm contributors'
-author = 'internlm contributors'
+project = 'InternLM'
+copyright = '2025, InternLM contributors'
+author = 'InternLM contributors'
 
 version_file = '../../internlm/version.py'
 with open(version_file, 'r') as f:

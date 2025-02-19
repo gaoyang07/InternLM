@@ -36,9 +36,9 @@ InternLM documentation
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: chat
+   :caption: dialogue interface
 
-   chat/*
+   dialogue_interface/*
 
 .. toctree::
    :glob:
