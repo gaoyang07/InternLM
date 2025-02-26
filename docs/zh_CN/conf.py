@@ -145,7 +145,15 @@ myst_heading_anchors = 5
 htmlhelp_basename = 'internlmdoc'
 
 latex_engine = 'xelatex'
-
+latex_elements = {
+    'fontpkg':
+    r'''
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+'''
+}
 latex_elements = {}
 
 latex_documents = [
