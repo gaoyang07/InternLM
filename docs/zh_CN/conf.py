@@ -91,7 +91,7 @@ source_suffix = {
 
 master_doc = 'index'
 
-language = 'en'
+language = 'zh_CN'
 
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
