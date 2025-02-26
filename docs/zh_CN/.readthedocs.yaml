@@ -13,4 +13,3 @@ python:
 
 sphinx:
   configuration: docs/zh_CN/conf.py
-  language: zh_CN
