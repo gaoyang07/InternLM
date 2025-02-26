@@ -17,18 +17,11 @@ version = __version__
 release = __version__
 
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.napoleon',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.autosectionlabel',
-    'sphinx.ext.intersphinx',
-    'sphinx_tabs.tabs',
-    'myst_parser',
-    'sphinx_copybutton',
-    'sphinxcontrib.mermaid',
-    'nbsphinx',
-    'sphinx.ext.mathjax',
+    'sphinx.ext.autodoc', 'sphinx.ext.autosummary', 'sphinx.ext.napoleon',
+    'sphinx.ext.viewcode', 'sphinx.ext.autosectionlabel',
+    'sphinx.ext.intersphinx', 'sphinx_tabs.tabs', 'myst_parser',
+    'sphinx_copybutton', 'sphinxcontrib.mermaid', 'nbsphinx',
+    'sphinx.ext.mathjax', 'sphinx.ext.imgconverter'
 ]
 
 nbsphinx_allow_errors = True
