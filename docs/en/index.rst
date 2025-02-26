@@ -56,4 +56,4 @@ We released InternLM3, which has open-sourced an 8-billion parameter instruction
 .. toctree::
    :caption: Switch Language
 
-   switch_language.md
+   switch_zh.md
