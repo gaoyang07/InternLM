@@ -144,9 +144,9 @@ myst_heading_anchors = 5
 
 htmlhelp_basename = 'internlmdoc'
 
-latex_elements = {}
-
 latex_engine = 'xelatex'
+
+latex_elements = {}
 
 latex_documents = [
     (master_doc, 'internlm.tex', 'InternLM Documentation', 'InternLM Team',
