@@ -98,7 +98,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 pygments_style = 'sphinx'
 
 html_theme = 'sphinx_book_theme'
-html_logo = '_static/image/robot.png'
+html_logo = '_static/image/internlm-logo.svg'
 html_title = project
 html_copy_source = True
 html_last_updated_fmt = ''

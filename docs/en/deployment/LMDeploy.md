@@ -1,6 +1,4 @@
-# Inference by LMDeploy
-
-English | [简体中文](lmdeploy_zh_cn.md)
+# LMDeploy
 
 [LMDeploy](https://github.com/InternLM/lmdeploy) is an efficient, user-friendly toolkit designed for compressing, deploying, and serving LLM models.
 
@@ -14,24 +12,27 @@ Install lmdeploy with pip (python 3.8+)
 pip install lmdeploy>=0.2.1
 ```
 
-## Offline batch inference
+## Inference with LMDeploy
 
-With just 4 lines of codes, you can execute batch inference using a list of prompts:
+### Offline batch inference
+
+You can run batch inference locally with the following python code:
 
 ```python
-from lmdeploy import pipeline
-pipe = pipeline("internlm/internlm2_5-7b-chat")
-response = pipe(["Hi, pls intro yourself", "Shanghai is"])
+import lmdeploy
+model_dir = "internlm/internlm3-8b-instruct"
+pipe = lmdeploy.pipeline(model_dir)
+response = pipe("Please tell me five scenic spots in Shanghai")
 print(response)
 ```
 
-With dynamic ntk, LMDeploy can handle a context length of 200K for `InternLM2`:
+With dynamic ntk, LMDeploy can handle a context length of 200K for `InternLM3`:
 
 ```python
 from lmdeploy import pipeline, TurbomindEngineConfig
 engine_config = TurbomindEngineConfig(session_len=200000,
                                       rope_scaling_factor=2.0)
-pipe = pipeline("internlm/internlm2_5-7b-chat", backend_engine=engine_config)
+pipe = pipeline("internlm/internlm3-8b-instruct", backend_engine=engine_config)
 gen_config = GenerationConfig(top_p=0.8,
                               top_k=40,
                               temperature=0.8,
@@ -42,18 +43,25 @@ print(response)
 
 For more information about LMDeploy pipeline usage, please refer to [here](https://lmdeploy.readthedocs.io/en/latest/inference/pipeline.html).
 
-## Serving
+### Serving
 
 LMDeploy's `api_server` enables models to be easily packed into services with a single command. The provided RESTful APIs are compatible with OpenAI's interfaces. Below are an example of service startup:
 
-```shell
-lmdeploy serve api_server internlm/internlm2_5-7b-chat
+```bash
+lmdeploy serve api_server internlm/internlm3-8b-instruct --model-name internlm3-8b-instruct --server-port 23333
 ```
 
-The default port of `api_server` is `23333`. After the server is launched, you can communicate with server on terminal through `api_client`:
+Then you can send a chat request to the server:
 
-```shell
-lmdeploy serve api_client http://0.0.0.0:23333
+```bash
+curl http://localhost:23333/v1/chat/completions \
+    -H "Content-Type: application/json" \
+    -d '{
+    "model": "internlm3-8b-instruct",
+    "messages": [
+        {"role": "user", "content": "Please tell me five scenic spots in Shanghai"}
+    ]
+    }'
 ```
 
-Alternatively, you can test the server's APIs oneline through the Swagger UI at `http://0.0.0.0:23333`. A detailed overview of the API specification is available [here](https://lmdeploy.readthedocs.io/en/latest/serving/restful_api.html).
+Find more details in the [LMDeploy documentation](https://lmdeploy.readthedocs.io/en/latest/)

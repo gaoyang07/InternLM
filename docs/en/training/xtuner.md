@@ -1,23 +1,13 @@
-# Fine-tuning with InternLM
+# [XTuner](https://github.com/InternLM/xtuner)
 
-English | [简体中文](./README_zh-CN.md)
-
-We recommend two projects to fine-tune InternLM.
-
-1. [XTuner](https://github.com/InternLM/xtuner) is an efficient, flexible and full-featured toolkit for fine-tuning large models.
-
-2. [InternEvo](https://github.com/InternLM/InternEvo/) is a powerful training framework that supports large-scale pre-training and finetuning.
-
-## XTuner
-
-### Highlights
+## Highlights
 
 1. Support LLM, VLM pre-training / fine-tuning on almost all GPUs. XTuner is capable of fine-tuning InternLM2-7B on a single 8GB GPU, as well as multi-node fine-tuning of models exceeding 70B.
-2. Support various training algorithms ([QLoRA](http://arxiv.org/abs/2305.14314), [LoRA](http://arxiv.org/abs/2106.09685), full-parameter fune-tune), allowing users to choose the most suitable solution for their requirements.
+2. Support various training algorithms ([QLoRA](http://arxiv.org/abs/2305.14314), [LoRA](http://arxiv.org/abs/2106.09685), full-parameter fine-tune), allowing users to choose the most suitable solution for their requirements.
 3. Compatible with [DeepSpeed](https://github.com/microsoft/DeepSpeed) 🚀, easily utilizing a variety of ZeRO optimization techniques.
 4. The output models can seamlessly integrate with deployment and server toolkit ([LMDeploy](https://github.com/InternLM/lmdeploy)), and large-scale evaluation toolkit ([OpenCompass](https://github.com/open-compass/opencompass), [VLMEvalKit](https://github.com/open-compass/VLMEvalKit)).
 
-### Installation
+## Installation
 
 - It is recommended to build a Python 3.10 virtual environment using conda
 
@@ -32,7 +22,7 @@ We recommend two projects to fine-tune InternLM.
   pip install -U 'xtuner[deepspeed]>=0.1.22'
   ```
 
-### Fine-tune
+## Fine-tune
 
 XTuner supports the efficient fine-tune (*e.g.*, QLoRA) for InternLM2.
 
@@ -73,7 +63,7 @@ XTuner supports the efficient fine-tune (*e.g.*, QLoRA) for InternLM2.
   xtuner convert pth_to_hf ${CONFIG_NAME_OR_PATH} ${PTH} ${SAVE_PATH}
   ```
 
-### Chat
+## Chat
 
 XTuner provides tools to chat with pretrained / fine-tuned large models.
 
@@ -86,7 +76,3 @@ For example, we can start the chat with InternLM2.5-Chat-7B :
 ```shell
 xtuner chat internlm/internlm2_5-chat-7b --prompt-template internlm2_chat
 ```
-
-## InternEvo
-
-\[TODO\]

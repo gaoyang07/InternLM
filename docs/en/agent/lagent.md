@@ -1,7 +1,5 @@
 # Lagent
 
-English | [简体中文](lagent_zh-CN.md)
-
 ## What's Lagent?
 
 Lagent is a lightweight open-source framework that allows users to efficiently build large language model(LLM)-based agents. It also provides some typical tools to augment LLM. The overview of the framework is shown below:
